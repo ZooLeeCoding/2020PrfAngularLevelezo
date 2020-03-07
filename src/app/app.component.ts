@@ -8,6 +8,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'LevelezoFrontend';
   tomb = ['alma', 'körte', 'banán', 'ananász'];
+  ujAru = '';
+
+  aruFeltoltes() {
+    if(this.ujAru !== '' && !(this.tomb.indexOf(this.ujAru) > -1)) {
+      this.tomb.push(this.ujAru);
+      this.ujAru = '';
+    } else {
+      this.title = 'Ilyen áru már van a tömbben';
+    }
+  }
 
   logConsole() {
     console.log('kattintottak a gombon');
