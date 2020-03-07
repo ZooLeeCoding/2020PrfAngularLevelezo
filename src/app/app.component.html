@@ -19,8 +19,10 @@
     </div>
 
     <div>
-      <ul *ngFor="">
-
+      <ul>
+        <li *ngFor="let tombElem of tomb" (click)="listClick(tombElem)">
+          {{tombElem}}
+        </li>
       </ul>
     </div>
     
