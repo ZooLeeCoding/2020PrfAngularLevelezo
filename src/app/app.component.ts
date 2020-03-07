@@ -7,8 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'LevelezoFrontend';
+  tomb = ['alma', 'körte', 'banán', 'ananász'];
 
   logConsole() {
     console.log('kattintottak a gombon');
+    if(this.title === 'LevelezoFrontend') {
+      this.title = 'Gombnyomás';
+    } else {
+      this.title = 'LevelezoFrontend';
+    }
   }
+
+  listClick(t: string) {
+    console.log('volt egy kattintás', t);
+  } 
 }
