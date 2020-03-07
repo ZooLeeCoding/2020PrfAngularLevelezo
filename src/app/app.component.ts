@@ -10,6 +10,10 @@ export class AppComponent {
   tomb = ['alma', 'körte', 'banán', 'ananász'];
   ujAru = '';
 
+  childHandler(msg: string) {
+    this.title = msg;
+  }
+
   aruFeltoltes() {
     if(this.ujAru !== '' && !(this.tomb.indexOf(this.ujAru) > -1)) {
       this.tomb.push(this.ujAru);
